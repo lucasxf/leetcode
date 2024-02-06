@@ -74,7 +74,14 @@ public class Main {
         //main.testValidateBinarySearchTree(); fail - MEDIUM
         // main.testSearch2DMatrix(); // success
         // main.testSearchInsertPosition(); // success
-        main.testLongestSubsequenceWithLimitedSum();
+        //main.testLongestSubsequenceWithLimitedSum();
+        main.testLongestPalindromicSubstring();
+    }
+
+    private void testLongestPalindromicSubstring() {
+        LongestPalindromicSubstring lpsubstr = new LongestPalindromicSubstring();
+        String ababac = lpsubstr.longestPalindrome("cxbababc");
+        System.out.println(ababac);
     }
 
     private void testLongestSubsequenceWithLimitedSum() {
