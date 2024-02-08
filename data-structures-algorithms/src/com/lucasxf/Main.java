@@ -1,5 +1,7 @@
 package com.lucasxf;
 
+import com.lucasxf.hacker_rank.warmup.JumpingOnTheClouds;
+import com.lucasxf.hacker_rank.warmup.RepeatedString;
 import com.lucasxf.leetcode.arrays_strings.*;
 import com.lucasxf.leetcode.arrays_strings.bonus.prefix_sum.FindHighestAltitude;
 import com.lucasxf.leetcode.arrays_strings.bonus.sliding_window.MinSizeSubarraySum;
@@ -35,6 +37,9 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         final Main main = new Main();
+        /**
+         * LeetCode
+         */
         //main.testReverseString();
         //main.testSquaresSortedArray();
         //main.testMaxAverageSubarray1();
@@ -75,7 +80,28 @@ public class Main {
         // main.testSearch2DMatrix(); // success
         // main.testSearchInsertPosition(); // success
         //main.testLongestSubsequenceWithLimitedSum();
-        main.testLongestPalindromicSubstring();
+        //main.testLongestPalindromicSubstring();
+
+        /**
+         * HackerRank
+         */
+        //main.testJumpingOnTheClouds(); // FAIL
+        main.testRepeatedString();
+    }
+
+    private void testRepeatedString() {
+        RepeatedString rs = new RepeatedString();
+        long countA = rs.repeatedString("udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps", 872514961806L);
+        System.out.println("As: " + countA);
+    }
+
+    private void testJumpingOnTheClouds() {
+        JumpingOnTheClouds jotc = new JumpingOnTheClouds();
+        int steps = jotc.jumpingOnClouds(Arrays.asList(0, 0, 1, 0, 0, 1, 0));
+        System.out.println("Steps: " + steps);
+        System.out.println();
+        int s2 = jotc.jumpingOnClouds(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+        System.out.println("Steps: " + s2);
     }
 
     private void testLongestPalindromicSubstring() {

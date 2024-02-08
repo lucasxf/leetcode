@@ -43,7 +43,7 @@ public class CountingValleys {
      *  1. INTEGER steps
      *  2. STRING path
      *
-     * SUCCESS
+     * SUCCESS (tested and submitted directly at HackerRank)
      */
     public int countingValleys(int steps, String path) {
         // Write your code here
@@ -54,8 +54,8 @@ public class CountingValleys {
         boolean isSeaLevel;
         int valleys = 0;
         for (char step : path.toCharArray()) {
-            // downhill
             isSeaLevel = altitude == 0;
+            // downhill
             if ('D' == step) {
                 altitude--;
                 if (altitude < 0 && isSeaLevel) {
