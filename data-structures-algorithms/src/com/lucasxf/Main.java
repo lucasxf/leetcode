@@ -1,5 +1,6 @@
 package com.lucasxf;
 
+import com.lucasxf.hacker_rank.arrays.HourglassSum;
 import com.lucasxf.hacker_rank.warmup.JumpingOnTheClouds;
 import com.lucasxf.hacker_rank.warmup.RepeatedString;
 import com.lucasxf.leetcode.arrays_strings.*;
@@ -86,7 +87,21 @@ public class Main {
          * HackerRank
          */
         //main.testJumpingOnTheClouds(); // FAIL
-        main.testRepeatedString();
+//        main.testRepeatedString(); // Success
+        //main.testHourglassSum(); // success
+    }
+
+    private void testHourglassSum() {
+        HourglassSum hourglassSum = new HourglassSum();
+        List<List<Integer>> input = Arrays.asList(
+                Arrays.asList(1,1,1,0,0,0),
+                Arrays.asList(0,1,0,0,0,0),
+                Arrays.asList(1,1,1,0,0,0),
+                Arrays.asList(0,0,2,4,4,0),
+                Arrays.asList(0,0,0,2,0,0),
+                Arrays.asList(0,0,1,2,4,0));
+        int sum = hourglassSum.hourglassSum(input);
+        System.out.printf("Sum: " + sum);
     }
 
     private void testRepeatedString() {
