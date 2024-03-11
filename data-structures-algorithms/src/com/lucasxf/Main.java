@@ -1,6 +1,7 @@
 package com.lucasxf;
 
 import com.lucasxf.hacker_rank.arrays.HourglassSum;
+import com.lucasxf.hacker_rank.arrays.NewYearChaos;
 import com.lucasxf.hacker_rank.warmup.JumpingOnTheClouds;
 import com.lucasxf.hacker_rank.warmup.RepeatedString;
 import com.lucasxf.leetcode.arrays_strings.*;
@@ -89,17 +90,23 @@ public class Main {
         //main.testJumpingOnTheClouds(); // FAIL
 //        main.testRepeatedString(); // Success
         //main.testHourglassSum(); // success
+        main.testNewYearChaos();
+    }
+
+    private void testNewYearChaos() {
+        NewYearChaos nyc = new NewYearChaos();
+        nyc.minimumBribes(Arrays.asList(1,2,5,3,7,8,6,4));
     }
 
     private void testHourglassSum() {
         HourglassSum hourglassSum = new HourglassSum();
         List<List<Integer>> input = Arrays.asList(
-                Arrays.asList(1,1,1,0,0,0),
-                Arrays.asList(0,1,0,0,0,0),
-                Arrays.asList(1,1,1,0,0,0),
-                Arrays.asList(0,0,2,4,4,0),
-                Arrays.asList(0,0,0,2,0,0),
-                Arrays.asList(0,0,1,2,4,0));
+                Arrays.asList(1, 1, 1, 0, 0, 0),
+                Arrays.asList(0, 1, 0, 0, 0, 0),
+                Arrays.asList(1, 1, 1, 0, 0, 0),
+                Arrays.asList(0, 0, 2, 4, 4, 0),
+                Arrays.asList(0, 0, 0, 2, 0, 0),
+                Arrays.asList(0, 0, 1, 2, 4, 0));
         int sum = hourglassSum.hourglassSum(input);
         System.out.printf("Sum: " + sum);
     }
