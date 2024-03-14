@@ -1,9 +1,9 @@
 package com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs;
 
-public interface Vertex {
+public enum NodeState {
 
-    String getLabel();
-
-    NodeState getState();
+    UNVISITED,
+    VISITING,
+    VISITED
 
 }

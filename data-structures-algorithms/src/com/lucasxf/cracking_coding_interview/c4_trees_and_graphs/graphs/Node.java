@@ -1,12 +1,14 @@
 package com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs;
 
+import javax.xml.crypto.NodeSetData;
 import java.util.Objects;
 
 public class Node implements Vertex {
 
     private int data;
     private String label;
-    private boolean isVisited;
+
+    private NodeState state;
 
     public Node() {
     }
@@ -32,12 +34,13 @@ public class Node implements Vertex {
         this.label = label;
     }
 
-    public boolean isVisited() {
-        return isVisited;
+
+    public NodeState getState() {
+        return state;
     }
 
-    public void setVisited(boolean visited) {
-        isVisited = visited;
+    public void setState(NodeState state) {
+        this.state = state;
     }
 
     @Override
@@ -58,8 +61,7 @@ public class Node implements Vertex {
         return "Node{" +
                 "data=" + data +
                 ", label='" + label + '\'' +
-                ", isVisited=" + isVisited +
+                ", state=" + state +
                 '}';
     }
-
 }

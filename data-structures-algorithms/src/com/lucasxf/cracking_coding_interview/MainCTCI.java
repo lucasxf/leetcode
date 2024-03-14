@@ -3,19 +3,28 @@ package com.lucasxf.cracking_coding_interview;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs.AdjacencyListGraph;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs.Node;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C41_RouteBetweenNodes;
+import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C42_MinimalTree;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.BinaryTreeNode;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.TestBinaryTrees;
-import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.TestTrees;
 
 import java.util.*;
-
-import static java.util.Arrays.asList;
 
 public class MainCTCI {
 
     public static void main(String[] args) {
         MainCTCI main = new MainCTCI();
-        main.testC41();
+        //main.testC41();
+        main.testC42();
+    }
+
+    void testC42() {
+        // my solution (FAIL)
+        C42_MinimalTree c42 = new C42_MinimalTree();
+        //c42.minimalTree(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+
+        // Book solution
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        BinaryTreeNode minimalBST = c42.createMinimalBST(arr);
     }
 
     void testC41() {
@@ -34,7 +43,7 @@ public class MainCTCI {
         adjacentVertices.put(nD, Arrays.asList(nF));
         adjacentVertices.put(nE, new ArrayList<>());
         adjacentVertices.put(nF, new ArrayList<>());
-        graph.setAdjacentVertices(adjacentVertices);
+        graph.setAdjacentNodes(adjacentVertices);
         System.out.println("Is there a route? " + c41.isThereARoute(graph, nA, nB));
         System.out.println("Is there a route? " + c41.isThereARoute(graph, nA, nC));
         System.out.println("Is there a route? " + c41.isThereARoute(graph, nA, nD));

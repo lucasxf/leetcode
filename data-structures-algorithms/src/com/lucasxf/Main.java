@@ -95,7 +95,7 @@ public class Main {
 
     private void testNewYearChaos() {
         NewYearChaos nyc = new NewYearChaos();
-        nyc.minimumBribes(Arrays.asList(1,2,5,3,7,8,6,4));
+        nyc.minimumBribes(Arrays.asList(1, 2, 5, 3, 7, 8, 6, 4));
     }
 
     private void testHourglassSum() {

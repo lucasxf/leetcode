@@ -6,20 +6,20 @@ import java.util.Map;
 
 public class AdjacencyListGraph implements Graph {
 
-    private Map<Node, List<Node>> adjacentVertices = new HashMap<>();
+    private Map<Node, List<Node>> adjacentNodes = new HashMap<>();
 
-    public Map<Node, List<Node>> getAdjacentVertices() {
-        return adjacentVertices;
+    public Map<Node, List<Node>> getAdjacentNodes() {
+        return adjacentNodes;
     }
 
-    public void setAdjacentVertices(Map<Node, List<Node>> adjacentVertices) {
-        this.adjacentVertices = adjacentVertices;
+    public void setAdjacentNodes(Map<Node, List<Node>> adjacentNodes) {
+        this.adjacentNodes = adjacentNodes;
     }
 
     @Override
     public String toString() {
         return "AdjacencyListGraph{" +
-                "adjacentVertices=" + adjacentVertices +
+                "adjacentVertices=" + adjacentNodes +
                 '}';
     }
 
