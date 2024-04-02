@@ -1,6 +1,5 @@
 package com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs;
 
-import javax.xml.crypto.NodeSetData;
 import java.util.Objects;
 
 public class Node implements Vertex {

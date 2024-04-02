@@ -19,19 +19,19 @@ public class PrintNodes {
                 TreeNode node = queue.remove();
 
                 // do some logic here on the current node
-                System.out.println("val: " + node.val);
+                //System.out.println("val: " + node.val);
 
                 // put the next level onto the queue
                 if (node.left != null) {
-                    System.out.println("left");
+                    //     System.out.println("left");
                     queue.add(node.left);
                 }
                 if (node.right != null) {
-                    System.out.println("right");
+                    //   System.out.println("right");
                     queue.add(node.right);
                 }
 
-                System.out.println("q: " + queue);
+                //System.out.println("q: " + queue);
             }
         }
     }

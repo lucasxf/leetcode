@@ -4,6 +4,8 @@ import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs.Adjacenc
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs.Node;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C41_RouteBetweenNodes;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C42_MinimalTree;
+import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C43_ListOfDepths;
+import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C44_CheckBalanced;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.BinaryTreeNode;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.TestBinaryTrees;
 
@@ -14,7 +16,20 @@ public class MainCTCI {
     public static void main(String[] args) {
         MainCTCI main = new MainCTCI();
         //main.testC41();
-        main.testC42();
+        //main.testC42();
+        //main.testC43();
+        main.testC44();
+    }
+
+    void testC44() {
+        C44_CheckBalanced c44 = new C44_CheckBalanced();
+        boolean isBalanced = c44.checkBalanced(TestBinaryTrees.getPerfectBinarySearchTree());
+        System.out.println("Balanced? " + isBalanced);
+    }
+
+    void testC43() {
+        C43_ListOfDepths c43 = new C43_ListOfDepths();
+        c43.listsOfDepths(TestBinaryTrees.getPerfectBinarySearchTree());
     }
 
     void testC42() {

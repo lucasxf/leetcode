@@ -73,9 +73,9 @@ public class Main {
         //main.testMinDepthBinaryTree(); success
         //main.testMaxDifferenceBetweenNodeAndAncestor(); success
         //main.testDiameterOfBinaryTree(); fail
-        //main.testPrintNodes(); // n/a
+        main.testPrintNodes(); // n/a
         //main.testRightSideView(); // success
-        //main.testLargestValueInEachTreeRow(); // success
+        //  main.testLargestValueInEachTreeRow(); // success
         //main.testDeepestLeavesSum(); // success
         // main.testZigzagLevelOrderTraversal(); fail
         //main.testValidateBinarySearchTree(); fail - MEDIUM
@@ -90,7 +90,7 @@ public class Main {
         //main.testJumpingOnTheClouds(); // FAIL
 //        main.testRepeatedString(); // Success
         //main.testHourglassSum(); // success
-        main.testNewYearChaos();
+        //main.testNewYearChaos();
     }
 
     private void testNewYearChaos() {

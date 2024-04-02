@@ -15,6 +15,7 @@ import java.util.Queue;
 public class LargestValueInEachTreeRow {
 
     public List<Integer> largestValues(TreeNode root) {
+        System.out.println("root: " + root);
         if (root == null) {
             return new ArrayList<>();
         }
@@ -24,6 +25,7 @@ public class LargestValueInEachTreeRow {
         int max = Integer.MIN_VALUE;
         while (!nodes.isEmpty()) {
             int currRowSize = nodes.size();
+            System.out.println("level size: " + currRowSize);
             for (int i = 0; i < currRowSize; i++) {
                 TreeNode node = nodes.remove();
                 if (node.left != null) {
