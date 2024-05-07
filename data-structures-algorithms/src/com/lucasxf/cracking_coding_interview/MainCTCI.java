@@ -2,10 +2,7 @@ package com.lucasxf.cracking_coding_interview;
 
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs.AdjacencyListGraph;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.graphs.Node;
-import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C41_RouteBetweenNodes;
-import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C42_MinimalTree;
-import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C43_ListOfDepths;
-import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.C44_CheckBalanced;
+import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.questions.*;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.BinaryTreeNode;
 import com.lucasxf.cracking_coding_interview.c4_trees_and_graphs.trees.TestBinaryTrees;
 
@@ -18,7 +15,31 @@ public class MainCTCI {
         //main.testC41();
         //main.testC42();
         //main.testC43();
-        main.testC44();
+        //main.testC44();
+        main.testC45();
+    }
+
+    void testC45() {
+        C45_ValidateBST c45 = new C45_ValidateBST();
+        /*
+        BinaryTreeNode binaryTree = TestBinaryTrees.getBinaryTree();
+        BinaryTreeNode bst = TestBinaryTrees.getPerfectBinarySearchTree();
+        boolean validateBT = c45.validate(binaryTree, binaryTree.data, binaryTree.data);
+        System.out.println(validateBT); // false
+        boolean validateBST = c45.validate(bst, bst.data, bst.data);
+        System.out.println(validateBST); // true
+        boolean validateSingleRoot = c45.validate(new BinaryTreeNode(1), 1, 1);
+        System.out.println(validateSingleRoot); // true
+        */
+        BinaryTreeNode ll2 = new BinaryTreeNode(2);
+        BinaryTreeNode lr12 = new BinaryTreeNode(6);
+        BinaryTreeNode l4 = new BinaryTreeNode(4, ll2, lr12);
+        BinaryTreeNode rr20 = new BinaryTreeNode(20);
+        BinaryTreeNode r10 = new BinaryTreeNode(10, new BinaryTreeNode(8), rr20);
+        BinaryTreeNode root = new BinaryTreeNode(8, l4, r10);
+        System.out.println(root);
+        boolean validate = c45.validate(root);
+        System.out.println(validate); // false - came true, wrong alg
     }
 
     void testC44() {
